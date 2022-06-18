@@ -3,7 +3,7 @@ import sys
 
 class ProjectLogger:
 
-    LOGGER_NAME = None
+    LOGGER = None
 
     def set_logger(
         logger_name,
@@ -29,13 +29,13 @@ class ProjectLogger:
         consoleHandler = logging.StreamHandler(sys.stdout)
         consoleHandler.setFormatter(formatter)
         logger.addHandler(consoleHandler)
-        
-        return logger
+
+        ProjectLogger.LOGGER = logger
 
     @staticmethod
     def get_logger(module_name):
-        if ProjectLogger.LOGGER_NAME is None:
+        if ProjectLogger.LOGGER is None:
             return logging.getLogger(__name__)
         else:
-            logging.getLogger(ProjectLogger.LOGGER_NAME).getChild(module_name)
+            return ProjectLogger.LOGGER.getChild(module_name)
 
