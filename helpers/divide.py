@@ -3,6 +3,9 @@ logger = ProjectLogger.get_logger(__name__)
 
 def divide(a, b):
     try:
-        return a/b
+        c = a/b
+        logger.info(f'{a} divided by {b} is {c}')
+        return c
     except Exception as e:
-        logger.error("Exception Occurred", exc_info=True)
+        logger.error(f"Exception Occurred in divide function for ({a}, {b}) inputs.", exc_info=True)
+        return None
