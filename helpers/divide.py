@@ -1,5 +1,7 @@
-from utils.logging import ProjectLogger
-logger = ProjectLogger.get_logger(__name__)
+# from utils.logging import ProjectLogger
+# logger = ProjectLogger.get_logger(__name__)
+import logging
+logger = logging.getLogger(__name__)
 
 def divide(a, b):
     try:

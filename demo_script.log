@@ -1,10 +1,10 @@
-2022-06-19 01:00:34 - demo_script - INFO - Task Started.
-2022-06-19 01:00:34 - demo_script - INFO - Performing division, 10 divided by 3.
-2022-06-19 01:00:34 - demo_script.helpers.divide - INFO - 10 divided by 3 is 3.3333333333333335
-2022-06-19 01:00:34 - demo_script - INFO - Performing division, 10 divided by 0.
-2022-06-19 01:00:34 - demo_script.helpers.divide - ERROR - Exception Occurred in divide function for (10, 0) inputs.
+2022-06-19 21:43:36,825 [INFO] __main__: Task Started.
+2022-06-19 21:43:36,825 [INFO] __main__: Performing division, 10 divided by 3.
+2022-06-19 21:43:36,825 [INFO] helpers.divide: 10 divided by 3 is 3.3333333333333335
+2022-06-19 21:43:36,825 [INFO] __main__: Performing division, 10 divided by 0.
+2022-06-19 21:43:36,825 [ERROR] helpers.divide: Exception Occurred in divide function for (10, 0) inputs.
 Traceback (most recent call last):
-  File "./helpers/divide.py", line 6, in divide
+  File "./helpers/divide.py", line 8, in divide
     c = a/b
 ZeroDivisionError: division by zero
-2022-06-19 01:00:34 - demo_script - INFO - Task Completed.
+2022-06-19 21:43:36,826 [INFO] __main__: Task Completed.
